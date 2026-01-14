@@ -1,0 +1,2 @@
+# BinaryConverter
+Ascii -> Decimal -> Binary
