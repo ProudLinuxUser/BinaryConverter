@@ -6,7 +6,7 @@ void dec_bin(int decimal);
 int main(void)
 {
         char askusr[100];
-        printf("Decimel to Binary converter\n");
+        printf("Text to Binary converter\n");
         printf("---------------------------\n");
         printf("Enter Ascii character to convert into Decimal and Binary: ");
         scanf("%99s",askusr);
