@@ -1,26 +1,27 @@
 #include <stdio.h>
-#include <cs50.h>
 #include <stdlib.h>
 
 void dec_bin(int decimal);
 
 int main(void)
 {
+        char askusr[100];
         printf("Decimel to Binary converter\n");
         printf("---------------------------\n");
-        string askusr = get_string("Enter Ascii character to convert into Decimal and Binary: ");
+        printf("Enter Ascii character to convert into Decimal and Binary: ");
+        scanf("%99s",askusr);
 
-        for (int k = 0; askusr[k] != '\0';k++)
+        for (int i = 0; askusr[i] != '\0';i++)
         {
-                int value = (int)askusr[k];
-                printf("%c -> %d -> ",askusr[k],value);
+                int value = (int)askusr[i];
+                printf("%c -> %d -> ",askusr[i],value);
                 dec_bin(value);
         }
 }
 
 void dec_bin(int decimal)
 {
-        int bits[64];
+        int bits[8];
         int i = 0;
 
         if (decimal == 0)
@@ -29,7 +30,7 @@ void dec_bin(int decimal)
                 exit(1);
         }
 
-        while (decimal > 0 && i < 64)
+        while (decimal > 0 && i < 8)
         {
                 bits[i] = decimal % 2;
                 decimal = decimal / 2;
