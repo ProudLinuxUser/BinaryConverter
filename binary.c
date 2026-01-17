@@ -1,12 +1,11 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 void dec_bin(int decimal);
 
 int main(void)
 {
         char askusr[100];
-        printf("Text to Binary converter\n");
+        printf("Decimel to Binary converter\n");
         printf("---------------------------\n");
         printf("Enter Ascii character to convert into Decimal and Binary: ");
         scanf("%99s",askusr);
@@ -22,23 +21,15 @@ int main(void)
 void dec_bin(int decimal)
 {
         int bits[8];
-        int i = 0;
 
-        if (decimal == 0)
-        {
-                printf("0-Binary\n");
-                exit(1);
-        }
-
-        while (decimal > 0 && i < 8)
+        for (int i = 7; i >= 0; i--)
         {
                 bits[i] = decimal % 2;
-                decimal = decimal / 2;
-                i++;
+                decimal /= 2;
         }
 
         printf("Binary: ");
-        for (int j = i - 1; j >= 0; j--)
+        for (int j = 0; j < 8; j++)
         {
                 printf("%i",bits[j]);
         }
