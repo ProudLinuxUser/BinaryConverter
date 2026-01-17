@@ -1,2 +1,2 @@
 # BinaryConverter
-Ascii -> Decimal -> Binary
+Ascii -> Decimal -> Binary 8 bit version
